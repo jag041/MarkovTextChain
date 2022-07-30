@@ -68,10 +68,10 @@ struct Node {
 
         for (size_t i = 0; i < _parents.size(); ++i)
         {
-            // std::cout << "iterating thru children" << std::endl;
+            // std::cout << "iterating thru parents" << std::endl;
             if (_parents[i] == _node)
             {
-                // std::cout << "children equal" << std::endl;
+                // std::cout << "parents equal" << std::endl;
                 numParents++;
                 pWeights[i] /= (float)numParents;
                 return;
@@ -85,7 +85,7 @@ struct Node {
             pWeights[i] /= (float)numParents;
         }
         pWeights.push_back(1.f / (float)numParents);
-        // std::cout << "adding child complete" << std::endl;
+        // std::cout << "adding parent complete" << std::endl;
     }
     
 
